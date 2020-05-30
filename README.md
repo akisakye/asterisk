@@ -50,6 +50,9 @@ Also, to enter the container to snoop around
 
 	docker exec -it [container_name] bash
 
+### Shoutout
+Want to thank tucny.com for providing RPMs for Asterisk.
+
 ### Feedback
 alex [at] infraops.io
 

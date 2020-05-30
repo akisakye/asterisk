@@ -6,7 +6,7 @@ RUN wget https://ast.tucny.com/repo/tucny-asterisk.repo -O /etc/yum.repos.d/tucn
 
 RUN rpm --import https://ast.tucny.com/repo/RPM-GPG-KEY-dtucny
 
-RUN yum -y --enablerepo asterisk-16 install asterisk asterisk-sip; yum clean all
+RUN yum -y --enablerepo asterisk-16 install asterisk asterisk-sip && yum clean all
 
 EXPOSE 5060/udp
 
