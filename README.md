@@ -12,12 +12,14 @@ What is inside;
 ### Usage
 Before you begin, it would be a good idea to have docker installed ;-)
 
-	$ docker pull akisakye/asterisk:16
-	$ docker run -d -p5060:5060/udp akisakye/asterisk:16
+	$ docker pull akisakye/asterisk
+	$ docker run -d -p5060:5060/udp akisakye/asterisk
 	
 You do realise that with the container running, you need to edit your config files to make this container useful. I suggest mapping the config folder to a local folder making it easy to work with the files.
 
-	$ docker run -d -v asterisk:/etc/asterisk -p5060:5060/udp akiskaye/asterisk:16
+	$ docker run -d -v asterisk:/etc/asterisk -p5060:5060/udp akiskaye/asterisk
+
+Your SIP client should be able to register at port 5060/udp
 
 You can now run "docker volume inspect" to find out where your mountpoint is.
 
